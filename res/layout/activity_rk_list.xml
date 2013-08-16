@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/light_black"
+    >
+
+	<ListView
+        android:id="@+id/lviRkList"
+        android:layout_marginTop="3dp"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/adview"
+        android:dividerHeight="1dp">
+    </ListView>
+    
+	<com.google.ads.AdView android:layout_width="fill_parent"
+                           android:layout_height="wrap_content"
+                           android:id="@+id/adview"
+                           android:layout_alignParentBottom="true"
+                           ads:adUnitId="a1516429f8f10db"
+                           ads:adSize="SMART_BANNER"
+                           ads:loadAdOnCreate="true"
+        ads:testDevices="TEST_EMULATOR"/>	
+
+</RelativeLayout>
