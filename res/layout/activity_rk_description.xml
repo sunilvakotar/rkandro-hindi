@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+                xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/light_black"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    tools:context=".RkList">
 
 
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
                 android:id="@+id/scrollView" android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:background="@drawable/desc_bg"
-                android:layout_below="@+id/relativeLayout1"
-                android:layout_above="@+id/adview">
+                android:background="@drawable/desc_bg">
         <LinearLayout android:orientation="vertical" android:layout_width="fill_parent"
                       android:layout_height="fill_parent">
+
             <TextView
                     android:id="@+id/TextDescription"
                     android:layout_width="wrap_content"
@@ -35,22 +35,32 @@
                            ads:adSize="SMART_BANNER"
                            ads:testDevices="TEST_EMULATOR"/>-->
 
-    <RelativeLayout  android:layout_width="wrap_content"
+    <!--<RelativeLayout  android:layout_width="wrap_content"
                      android:layout_height="wrap_content"
                      android:layout_centerInParent="true"
                     android:id="@+id/popupWithCross"
-                    android:visibility="gone">
-        <com.google.ads.AdView android:layout_width="wrap_content"
+                    android:visibility="visible">
+        <com.lmsa.cqkv143768.AdView
+                xmlns:ap="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/adviewpopup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                ap:animation="fade"
+                ap:banner_type="medium_rectangle"
+                ap:test_mode="false"
+                ap:canShowMR="false"
+                />
+        &lt;!&ndash;<com.google.ads.AdView android:layout_width="wrap_content"
                                android:layout_height="wrap_content"
                                android:id="@+id/adviewpopup"
                                ads:adUnitId="a15180bae6da4bf"
                                ads:adSize="IAB_MRECT"
-                               ads:testDevices="TEST_EMULATOR"/>
+                               ads:testDevices="TEST_EMULATOR"/>&ndash;&gt;
         <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/closeBtn" android:layout_alignRight="@+id/adviewpopup"
                 android:layout_alignTop="@+id/adviewpopup" android:src="@drawable/close" android:clickable="true"/>
-    </RelativeLayout>
+    </RelativeLayout>-->
 
 </RelativeLayout>
